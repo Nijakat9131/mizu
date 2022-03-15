@@ -1,0 +1,42 @@
+<script>
+    function call()
+    {
+      rate.innerHTML=pizza.value
+      nam.innerHTML=pizza.options[pizza.selectedIndex].text
+      qty.innerHTML=Quantity.value
+      amt.innerHTML=parseInt(Quantity.value)*parseInt(pizza.value)
+      pimage.src=pizza.options[pizza.selectedIndex].text+".jfif"
+
+    }
+
+
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b><p>Pizza List</p></b>
+<select id="pizza" onchange="call()">
+  <option>-Option-</option>
+  <option value="699">Peppy Paneer Pizza</option>
+  <option value="599">Farmhouse Pizza</option>
+  <option value="839">Four Cheese Pizza</option>
+  <option value="765">Paneer Makhani Pizza</option>
+  <option value="399">Margherita Pizza</option>
+</select>
+  <b><p>Quantity</p></b>
+  <input type="text" id="Quantity" placeholder="Enter Quantity"><br><br>
+<input type="button" value="show result" onclick="call()"><br><br>
+<b>Pizza Name:</b><br><div id="nam">see here</div><br>
+<b>Pizza Rate:</b><br><div id="rate">see here</div><br>
+
+<b>Pizza Qty:</b><br><div id="qty">see here</div><br>
+<b>Total Ammount:</b><br><div id="amt">see here</div><br>
+<b>Pizza Picture:</b><br><img src="Pizza.jfif" id="pimage" width="200"><br>
+</body>
+</html>
